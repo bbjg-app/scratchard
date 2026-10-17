@@ -7,24 +7,16 @@
 <meta name="description" content="Scratchard: a game in development. First artwork, published 17 October 2026. © 2026 Dmitrijs Medvedevs.">
 <meta property="og:title" content="Scratchard">
 <meta property="og:description" content="A game in development. First artwork.">
-<meta property="og:image" content="https://bbjg-app.github.io/scratchard/img/cat-in-the-berry-garden.jpg">
+<meta property="og:image" content="https://scratchard.app/img/scratchard-og.jpg">
+<meta name="theme-color" content="#06080d">
 <style>
   :root {
-    --ground: #f3efe6;
-    --ink: #1f2a24;
-    --ink-soft: #55625a;
-    --accent: #2f7a4f;
-    --rule: #d9d2c2;
+    --ground: #06080d;
+    --ink: #eef0f4;
+    --ink-soft: #a3a9b6;
+    --accent: #7fd1a0;
+    --rule: #232a36;
     --mat: #ffffff;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --ground: #141a17;
-      --ink: #eef2ea;
-      --ink-soft: #a5b2a8;
-      --accent: #7fd1a0;
-      --rule: #2b3630;
-    }
   }
   * { box-sizing: border-box; }
   body {
@@ -33,23 +25,15 @@
     color: var(--ink);
     font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   }
-  .wrap { max-width: 980px; margin: 0 auto; padding: 48px 16px 64px; }
-  header { margin-bottom: 36px; }
-  h1 {
-    font: 700 clamp(2.4rem, 8vw, 4rem)/1 Georgia, "Times New Roman", serif;
-    letter-spacing: -0.01em;
-    margin: 0 0 12px;
-  }
-  .lead { color: var(--ink-soft); font-size: 1.1rem; margin: 0; max-width: 34em; }
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 32px 16px 64px; }
+  header { margin-bottom: 28px; text-align: center; }
+  .logo { display: block; width: 100%; max-width: 860px; height: auto; margin: 0 auto; }
+  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .lead { color: var(--ink-soft); font-size: 1.1rem; margin: 4px 0 0; }
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
   figure { margin: 0; }
   .mat {
     background: var(--mat);
-    border: 1px solid var(--rule);
     border-radius: 6px;
     padding: 14px;
     display: flex;
@@ -72,14 +56,15 @@
   a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
   @media (max-width: 640px) {
     .grid { grid-template-columns: 1fr; }
-    .wrap { padding-top: 32px; }
+    .wrap { padding-top: 20px; }
   }
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
-    <h1>Scratchard</h1>
+    <h1 class="sr-only">Scratchard</h1>
+    <img class="logo" src="img/scratchard-logo.png" width="1722" height="690" alt="Scratchard">
     <p class="lead">A game in development. Here is the first artwork.</p>
   </header>
 
